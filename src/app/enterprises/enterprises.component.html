@@ -1,5 +1,12 @@
+<div class="flex flex-col">
+  <h1>Enterprises</h1>
+</div>
 <div class="grid grid-cols-12">
-  <table mat-table [dataSource]="enterprises" class="col-span-6 mat-elevation-z8">
+  <table
+    mat-table
+    [dataSource]="enterprises"
+    class="col-span-6 mat-elevation-z8"
+  >
     <!-- ID Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>ID</th>
@@ -36,6 +43,9 @@
     <!-- Header Row -->
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <!-- Data Rows -->
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>
+
+
+

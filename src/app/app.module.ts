@@ -1,6 +1,9 @@
 // src/app/app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common'; // Import CommonModule
@@ -17,7 +20,7 @@ import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
     EnterprisesComponent,
     CommonModule ,
     MatIconModule,
-
+    BrowserAnimationsModule
   ],
   providers: [DataService],
 
