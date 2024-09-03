@@ -1,0 +1,5 @@
+<!-- src/app/enterprises/enterprises.component.html -->
+<div *ngFor="let enterprise of departments">
+  <h2>{{ enterprise.name }}</h2>
+  <app-departments [enterpriseId]="enterprise.id"></app-departments>
+</div>
