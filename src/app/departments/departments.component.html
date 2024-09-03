@@ -1,13 +1,40 @@
 <!-- src/app/enterprises/enterprises.component.html -->
-<div
-class=""
->
+<div class="">
   <div *ngFor="let enterprise of departments" class="">
     <h2>{{ enterprise.name }}</h2>
     <app-departments [enterpriseId]="enterprise.id"></app-departments>
   </div>
-  
-  <h1>
-    a
-  </h1>
+</div>
+
+<div class="flex flex-col">
+  <h1>Departments</h1>
+</div>
+
+<div class="grid grid-cols-12">
+  <p-table [value]="departments" class="col-span-6">
+    <!-- ID Column -->
+    <ng-template pTemplate="header">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-enterprise>
+      <tr>
+        <td>{{ enterprise.id }}</td>
+        <td>{{ enterprise.name }}</td>
+        <td>
+          <button pButton type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <i class="pi pi-pencil"></i>
+            Edit
+          </button>
+          <button pButton type="button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            <i class="pi pi-trash"></i>
+            Delete
+          </button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
 </div>

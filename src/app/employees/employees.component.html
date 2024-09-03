@@ -1,4 +1,13 @@
 <!-- src/app/employees/employees.component.html -->
-<ul>
-  <li *ngFor="let employee of employees">{{ employee.name }}</li>
-</ul>
+<p-table [value]="employees">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-employee>
+    <tr>
+      <td>{{ employee.name }}</td>
+    </tr>
+  </ng-template>
+</p-table>

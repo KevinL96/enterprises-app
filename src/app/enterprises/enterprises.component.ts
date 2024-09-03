@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
 import { MatTableModule } from '@angular/material/table'; // Import MatTableModule
+import { TableModule } from 'primeng/table';
 
 @Component({
   selector: 'app-enterprises',
@@ -15,7 +16,9 @@ import { MatTableModule } from '@angular/material/table'; // Import MatTableModu
   standalone: true,
   imports: [CommonModule, MatSlideToggleModule,
     MatTableModule,
-    MatIconModule],
+    MatIconModule,
+    TableModule],
+  
 })
 export class EnterprisesComponent implements OnInit {
   enterprises: Enterprise[] = [];
